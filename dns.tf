@@ -40,7 +40,7 @@ resource "aws_route53_record" "mail-dkim" {
 resource "aws_route53_record" "chris-blog" {
   zone_id = "${aws_route53_zone.mowforth.zone_id}"
   name = "chris.mowforth.com"
-  type = "A"
+  type = "CNAME"
   ttl = "${var.dns_ttl}"
-  records = ["52.17.166.253"]
+  records = ["m0wfo.github.io"]
 }
